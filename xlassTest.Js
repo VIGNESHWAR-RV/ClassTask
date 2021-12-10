@@ -46,14 +46,11 @@ let countriesInfo = [
   document.body.appendChild(content);
   
 countriesInfo.map(({name,population,region,flag,capital})=>{
-let card = document.createElement("div");
-card.className="card";
-card.innerHTML = `<img src=${flag} class="flag"></img>
+content.innerHTML += `<div class="card" ><img src=${flag} class="flag"></img>
                   <h2 class="text">${name}</h2>
                   <p class="text"><b>Region</b> - ${region}</p>
                   <p class="text"><b>Capital</b> - ${capital}</p>
-                  <p class="text"><b>Population</b> - ${population}</p>`;
-   content.appendChild(card);
+                  <p class="text"><b>Population</b> - ${population}</p></div>`;
 });
 
 //   for(let i of countriesInfo){
